@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
 
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   margin: 0;
   color: white;
   font-family: 'Ubuntu Mono', monospace;
@@ -12,4 +15,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  height: 100%;
 }
