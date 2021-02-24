@@ -11,7 +11,6 @@ export default function Game() {
     const [ question, setQuestion ] = useState<Question>( {} as Question );
 
     const onGameStart = () => {
-        startGame( true );
         ApiHelper.getQuestions({
             amount: 1,
             difficulty: Difficulty.EASY,
@@ -19,14 +18,16 @@ export default function Game() {
         }).then( ( questions : Question[] ) =>  {
             setQuestion( questions[0] );
             console.log( questions[0] );
+            startGame( true );
         } );
     }
+
+    const content = isStarted ? <QuizMain/> : <StartButton startFn={ onGameStart }/>;
     
     return (
         <QuestionContext.Provider value={ question }>
             <div className="game-main">
-                <StartButton startFn={ onGameStart }/>
-                <QuizMain/>
+                { content }
             </div>
         </QuestionContext.Provider>
     )

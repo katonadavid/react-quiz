@@ -1,0 +1,38 @@
+.quiz-main {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .question {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgb(2, 23, 32);
+        border: 3px solid white;
+        margin-bottom: 3rem;
+
+        h1 {
+            padding: 1rem 3rem;
+            margin: 0;
+            display: inline-block;
+            text-align: center;
+        }
+    }
+
+    .options {
+        width: 100%;
+        display: grid;
+
+        .option {
+            background-color: rgb(2, 23, 32);
+            padding: 1rem 3rem;
+            border: 3px solid white;
+        }
+    }
+    
+}
